@@ -1,10 +1,7 @@
-export default function debounce(callback, delay) {
-  let timer;
-  return (...args) => {
-    if (timer) clearTimeout(timer);
-    timer = setTimeout(() => {
-      callback(...args);
-      timer = null;
-    }, delay);
-  };
-}
+import Slide from "./slide.js";
+
+const slide = new Slide('.slide', '.slide-wrapper');
+slide.init();
+console.log(slide)
+
+
